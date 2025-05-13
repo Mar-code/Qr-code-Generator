@@ -16,8 +16,8 @@ app.get('/', (req, res)=>{
 app.post('/generate', async(req, res) => {
    const url = req.body.url;
    const qr_img = qr.image(url, { type: 'png' });
-   qr_img.pipe(fs.createWriteStream('public/assets/qr.png'));
-   let qr_path = '/assets/qr.png';
+   qr_img.pipe(fs.createWriteStream('public/qr.png'));
+   let qr_path = '/qr.png';
    res.render('index.ejs', {qrCode: qr_path});
 })
 
