@@ -18,8 +18,8 @@
                 <button type="submit">Generate QR Code</button>
             </form>
             <% if (locals.qrCode) { %>
-                <img src="<%=qrCode%>" alt="Qr-code">
-                <button type="button"><a href="<%=qrCode%>" download="qrcode.png">Download QR Code</a></button>
+                <img src="data:image/png; base64, <%=qrCode %>" alt="Qr-code">
+                <button type="button"><a href="/download" download="qrcode.png">Download QR Code</a></button>
             <% } %>
         </div>
 
